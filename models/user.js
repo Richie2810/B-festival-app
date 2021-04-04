@@ -27,6 +27,21 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      age: {
+        type: DataTypes.INTEGER,
+        allowNull:false
+      },
+      isBlocked: {
+        type: DataTypes.STRING,
+      },
+      isVIP: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      },
+      isPlanner: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      }
     },
     {
       sequelize,
