@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.STRING,
       allowNull: false 
     },
-    isVip:  {
+    isVIP:  {
       type:DataTypes.BOOLEAN,
       defaultValue: false 
     }
