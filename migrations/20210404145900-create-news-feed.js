@@ -1,34 +1,25 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('acts', {
+    await queryInterface.createTable('newsFeeds', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
-      },
-      start_time: {
-        type: Sequelize.DATE
-      },
-      end_time: {
-        type: Sequelize.DATE
-      },
-      image: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      video: {
+      title: {
         type: Sequelize.STRING
       },
       description: {
         type: Sequelize.STRING
       },
-      day: {
-        type: Sequelize.INTEGER
+      link: {
+        type: Sequelize.STRING
+      },
+      img: {
+        type: Sequelize.STRING,
+        allowNull:false
       },
       createdAt: {
         allowNull: false,
@@ -41,6 +32,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('acts');
+    await queryInterface.dropTable('newsFeeds');
   }
 };

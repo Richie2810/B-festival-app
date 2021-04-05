@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      user.hasMany(models.plan)
     }
   }
   user.init(
@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull:false
       },
-      isBlocked: {
+      schedule: {
         type: DataTypes.STRING,
       },
       isVIP: {
