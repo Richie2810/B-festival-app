@@ -8,9 +8,11 @@ router.post('/', async (req,res,next) => {
     try {
         const { day } = req.body
         console.log(day)
-        const actPerDay = await Act.findAll({
-            where: {day:day},
-            include : [Stage],
+        const actPerDay = await Stage.findAll({
+            include : [{
+                model: Act,
+                where: {day:day},
+            }],
         })
 
         return res.status(200).send(actPerDay)
