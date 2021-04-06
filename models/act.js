@@ -22,11 +22,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     start_time: {
-      type:DataTypes.TIME,
+      type:DataTypes.STRING,
       allowNull: false
     },
     end_time:  {
-      type:DataTypes.TIME,
+      type:DataTypes.STRING,
       allowNull: false 
     },
     image: {
