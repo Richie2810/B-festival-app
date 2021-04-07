@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       start_time: {
-        type: Sequelize.STRING1
+        type: Sequelize.STRING
       },
       end_time: {
         type: Sequelize.STRING
