@@ -35,16 +35,18 @@ router.post("/login", async (req, res, next) => {
 });
 
 router.post("/signup", async (req, res) => {
-  const { email, password, name } = req.body;
-  if (!email || !password || !name) {
-    return res.status(400).send("Please provide an email, password and a name");
+  const { email, password, name, age, isVIP } = req.body;
+  if (!email || !password || !name || !age) {
+    return res.status(400).send("Please provide an email, password, age and a name");
   }
 
   try {
     const newUser = await User.create({
       email,
       password: bcrypt.hashSync(password, SALT_ROUNDS),
-      name
+      name,
+      age,
+      isVIP
     });
 
     delete newUser.dataValues["password"]; // don't send back the password hash
