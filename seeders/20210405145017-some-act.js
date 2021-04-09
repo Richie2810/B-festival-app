@@ -47,7 +47,7 @@ module.exports = {
           end_time: "22:30",
           image: 'https://qwest.tv/media/wp-content/uploads/2018/12/qwest-tv-the-vulfpeck-phenomenon.jpg',
           video: 'https://www.youtube.com/watch?v=le0BLAEO93g&ab_channel=Vulf',
-          description:"Metallica is an American heavy metal band.",
+          description:"Vulfpeck is an American funk group founded in 2011.",
           day:2,
           stageId:2,
           createdAt: new Date(),
