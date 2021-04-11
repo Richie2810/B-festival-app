@@ -14,8 +14,9 @@ router.post('/', async (req,res,next) => {
             include : [{
                 model: Act,
                 where: {day:day},
-                include: User
+                include: User,
             }],
+            order: [['id', 'ASC']]
         })
 
         return res.status(200).send(actPerDay)

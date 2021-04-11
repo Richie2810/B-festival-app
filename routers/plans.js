@@ -28,7 +28,33 @@ router.post('/addPlan',authMiddleware, async (req,res,next) => {
             userId: req.user.id,
             actId
         })
-        return res.status(200).send(newPlan)
+        const user = await User.findByPk(req.user.id,
+            {
+                include: Act
+            })
+        return res.status(200).send(user.acts)
+    } catch(e){
+        console.log(e.message)
+        return res.status(400).send("Date is wrong")
+    }
+})
+
+router.delete('/removePlan/:actId', authMiddleware, async (req,res,next) => {
+    const { actId } = req.params
+    console.log('this is the acts ID', actId)
+    try {
+        await Plan.destroy({
+            where: {
+                actId:actId,
+                userId:req.user.id,
+            }
+        })
+
+        const user = await User.findByPk(req.user.id,
+            {
+                include: Act
+            })
+        return res.status(200).send(user.acts)
     } catch(e){
         console.log(e.message)
         return res.status(400).send("Date is wrong")
