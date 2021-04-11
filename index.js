@@ -7,6 +7,7 @@ const stagesRouter = require("./routers/stages")
 const authMiddleWare = require("./auth/middleware");
 const plansRouter = require('./routers/plans')
 const actsRouter = require('./routers/acts')
+const newsRouter = require('./routers/news')
 
 const app = express();
 
@@ -157,6 +158,7 @@ app.use("/", authRouter);
 app.use('/stages', stagesRouter)
 app.use('/plans', plansRouter)
 app.use('/acts', actsRouter)
+app.use('/news', newsRouter)
 
 // Listen for connections on specified port (default is port 4000)
 
