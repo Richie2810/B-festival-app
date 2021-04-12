@@ -74,4 +74,12 @@ router.get("/me", authMiddleware, async (req, res) => {
   res.status(200).send({ ...req.user.dataValues });
 });
 
+router.post('/makeVIP', authMiddleware, async (req,res,next) => {
+  console.log('HERE')
+  const userToUpdate = await User.findByPk(req.user.id)
+  console.log('THE USER', userToUpdate)
+  await userToUpdate.update({isVIP:true})
+  res.status(200).send({ ...req.user.dataValues })
+})
+
 module.exports = router;
