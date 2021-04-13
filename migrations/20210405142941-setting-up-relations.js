@@ -48,7 +48,6 @@ module.exports = {
 
     await queryInterface.addColumn("trackers", "crewId", {
       type: Sequelize.INTEGER,
-      allowNull: false,
       references: {
         model: "crews",
         key: "id",

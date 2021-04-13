@@ -13,13 +13,13 @@ module.exports = {
         },
         {
           geoLocator: '52.38868,4.933711',
-          crewId: 2,
+          crewId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           geoLocator: '52.389515,4.937768',
-          crewId: 2,
+          crewId: null,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
