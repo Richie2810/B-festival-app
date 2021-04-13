@@ -10,12 +10,20 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      tracker.belongsTo(models.crew)
+      // tracker.belongsTo(models.crew)
     }
   };
   tracker.init({
-    geoLocator: {
-      type:DataTypes.STRING,
+    longitude: {
+      type:DataTypes.DECIMAL,
+      allowNull: false,
+    },
+    latitude: {
+      type:DataTypes.DECIMAL,
+      allowNull: false,
+    },
+    isEnabled: {
+      type:DataTypes.BOOLEAN,
       allowNull: false,
     }
   }, {

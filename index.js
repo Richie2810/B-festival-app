@@ -9,6 +9,7 @@ const plansRouter = require('./routers/plans')
 const actsRouter = require('./routers/acts')
 const newsRouter = require('./routers/news')
 const crewRouter = require('./routers/crew')
+const trackerRouter = require('./routers/tracker')
 
 const app = express();
 
@@ -161,6 +162,7 @@ app.use('/plans', plansRouter)
 app.use('/acts', actsRouter)
 app.use('/news', newsRouter)
 app.use('/crew', crewRouter)
+app.use('/tracker', trackerRouter)
 
 // Listen for connections on specified port (default is port 4000)
 
