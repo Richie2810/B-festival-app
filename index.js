@@ -13,6 +13,9 @@ const trackerRouter = require('./routers/tracker')
 
 const app = express();
 
+const cors = require("cors");
+app.use(cors());
+
 /**
  * Middlewares
  *
