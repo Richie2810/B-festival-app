@@ -27,4 +27,17 @@ router.post('/changeStatus', async (req,res,next) => {
         return res.status(400).send("Something went wrong")
     }
 })
+
+router.post('/newLocation', async (req,res,next) => {
+    const { longitude, latitude, id } = req.body
+    console.log(longitude, latitude, id)
+    try{
+        const tracker = Tracker.findByPk(id)
+        console.log(tracker)
+    }catch(e){
+        console.log(e.message)
+        return res.status(400).send("Something went wrong")
+    }
+})
+
 module.exports = router;

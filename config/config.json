@@ -1,6 +1,6 @@
 {
   "development": {
-    "url": "postgres://hdaxyqxavsxwgu:961d63077ff00bb96b4ac7820c95fd6030efc1bb4274ee8cc8ecc369a9924db7@ec2-54-74-14-109.eu-west-1.compute.amazonaws.com:5432/d3ukjh981l0g99",
+    "url": "postgres://ldsrjqhk:6MlEElM8l21io9i_SuNF8cgl-Yz762C4@hattie.db.elephantsql.com:5432/ldsrjqhk",
     "dialect": "postgres",
     "operatorsAliases": "0"
   },

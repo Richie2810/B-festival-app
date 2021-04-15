@@ -6,19 +6,37 @@ module.exports = {
       "stages",
       [
         {
-          name: "Stage 1",
+          name: "Main Stage",
           isVIP: false,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          name: "Stage 2",
+          name: "Pyramid Stage",
           isVIP: true,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          name: "Stage 3",
+          name: "Fire Stage",
+          isVIP: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Maritim Stage",
+          isVIP: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Disco Tent",
+          isVIP: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Circus Tent",
           isVIP: false,
           createdAt: new Date(),
           updatedAt: new Date(),
