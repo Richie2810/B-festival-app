@@ -12,10 +12,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       start_time: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       end_time: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       image: {
         type: Sequelize.STRING,

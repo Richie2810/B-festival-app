@@ -18,7 +18,7 @@ router.post('/', async (req,res,next) => {
                 where: {day:day},
                 include: User,
             }],
-            order: [['id', 'ASC']]
+            order: [[Act, 'start_time', 'DESC']]
         })
 
         return res.status(200).send(actPerDay)

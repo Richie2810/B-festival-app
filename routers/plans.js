@@ -11,7 +11,11 @@ router.get('/', authMiddleware, async (req,res,next)=>{
     try{
         const user = await User.findByPk(req.user.id,
             {
-                include: Act
+                include: {
+                    model:Act,
+                    include: Stage
+                },
+                order:[[Act, 'start_time', 'DESC']]
             })
         res.status(200).send(user.acts)
     } catch(e){
@@ -30,7 +34,11 @@ router.post('/addPlan',authMiddleware, async (req,res,next) => {
         })
         const user = await User.findByPk(req.user.id,
             {
-                include: Act
+                include: {
+                    model:Act,
+                    include: Stage
+                },
+                order:[[Act, 'start_time', 'DESC']]
             })
         return res.status(200).send(user.acts)
     } catch(e){
@@ -52,7 +60,11 @@ router.delete('/removePlan/:actId', authMiddleware, async (req,res,next) => {
 
         const user = await User.findByPk(req.user.id,
             {
-                include: Act
+                include: {
+                    model:Act,
+                    include: Stage
+                },
+                order:[[Act, 'start_time', 'DESC']]
             })
         return res.status(200).send(user.acts)
     } catch(e){
