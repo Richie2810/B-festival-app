@@ -1,11 +1,11 @@
 # Festival-app Back-End
 
-This Festival app is for people who want to be organized and see as many bands and artists over 
-a three day festival as possible. Search through the stages, map or Lineup to find the acts you 
-would like to see and add them to your schedule. 
+This Festival app is for people who want to be organized and see as many bands and artists over a t
+hree day festival as possible. Search through the stages, map or Lineup to find the acts you would like 
+to see and add them to your schedule.
 
-This app also has functionallity to plan these fesivals, from adding newsfeed items to making 
-sure your equipment and crew are in the right places at the right time. 
+This app also has functionality to plan these festivals, from adding news feed items to making sure your 
+equipment and crew are in the right places at the right time.
 
 
 1. Clone the app
@@ -28,7 +28,8 @@ npm install
 
 4. Configure your database in `config/config.json`
 
-Default config is setup for usage with an ElephantSQL database instance, you need to provide the DB Url on the "url" key of the config.json file, key development.
+Default config is setup for usage with an ElephantSQL database instance, you need to provide the DB Url on the "url"
+key of the config.json file, key development.
 
 ```json
 // config/config.json
