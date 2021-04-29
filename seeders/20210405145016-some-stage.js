@@ -8,7 +8,7 @@ module.exports = {
         {
           name: "Main Stage",
           isVIP: false,
-          background: 'http://www.dinpattern.com/wp-content/uploads/2013/06/EE-gatsby-wallpaper.png',
+          background: 'https://www.wowpatterns.com/assets/files/resource_images/abstract-concentric-circle-illusion-seamless-pattern.jpg',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
