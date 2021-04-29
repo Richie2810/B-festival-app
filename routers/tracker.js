@@ -28,12 +28,13 @@ router.post('/changeStatus', async (req,res,next) => {
     }
 })
 
-router.post('/newLocation', async (req,res,next) => {
-    const { longitude, latitude, id } = req.body
-    console.log(longitude, latitude, id)
+router.post('/equipId', async (req,res,next) => {
+    const { equipId } = req.body
+    console.log(equipId)
     try{
-        const tracker = Tracker.findByPk(id)
+        const tracker = Tracker.findByPk(equipId)
         console.log(tracker)
+        res
     }catch(e){
         console.log(e.message)
         return res.status(400).send("Something went wrong")
