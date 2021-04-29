@@ -43,7 +43,7 @@ module.exports = {
         {
           name: "Circus Tent",
           isVIP: false,
-          background: 'https://www.wowpatterns.com/assets/files/resource_images/decorative-embroidery-flowers-pattern-seamless-floral-background-texture.jpg',
+          background: 'https://www.wowpatterns.com/assets/files/resource_images/india-lotus-flower-block-print-pattern.jpg',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
