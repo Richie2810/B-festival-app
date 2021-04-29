@@ -39,7 +39,7 @@ router.get('/:stageId', async (req,res,next) => {
                     model:User,
                 }]
             }],
-                order: [[Act, "day", "ASC"],[Act, 'start_time', 'ASC']] 
+                order: [[Act, "day", "ASC"],[Act, 'start_time', 'DESC']] 
 
         })
         console.log(stage.dataValues)
