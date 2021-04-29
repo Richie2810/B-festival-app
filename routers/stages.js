@@ -39,7 +39,8 @@ router.get('/:stageId', async (req,res,next) => {
                     model:User,
                 }]
             }],
-                order: [[Act, "day", "ASC"]]    
+                order: [[Act, "day", "ASC"],[Act, 'start_time', 'ASC']] 
+
         })
         console.log(stage.dataValues)
         return res.status(200).send(stage) 
