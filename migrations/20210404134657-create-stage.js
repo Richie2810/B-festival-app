@@ -14,6 +14,9 @@ module.exports = {
       isVIP: {
         type: Sequelize.BOOLEAN
       },
+      background: {
+        type:Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
