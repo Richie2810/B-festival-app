@@ -41,4 +41,23 @@ router.post('/equipId', async (req,res,next) => {
     }
 })
 
+router.post('/startTracking', async (req,res,next) => {
+    console.log('here')
+    const { userID, GKId, longitude, latitude} = req.body
+    try {
+        console.log('this is the users ID', userID)
+        const tracker = await Tracker.findByPk(GKId)
+        await tracker.update({
+            crewId:userID,
+            longitude,
+            latitude
+        })
+        res.status(201).send(tracker)
+
+    } catch (error) {
+        console.log(error);
+        return res.status(400).send({ message: "Something went wrong, sorry" });
+    }
+})
+
 module.exports = router;
